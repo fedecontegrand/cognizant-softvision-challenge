@@ -109,7 +109,7 @@ function App() {
                       )}
                     </div>
                     <div className={styles.divButtons}>
-                      <button onClick={() => removeCandidate(candidate.id)}>Eliminar</button>
+                      <button onClick={() => removeCandidate(candidate.id)}>🗑️</button>
                       {index > 0 && (
                         <button
                           onClick={() =>

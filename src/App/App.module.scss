@@ -50,10 +50,12 @@
   .divButtons{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: fit-content;
     button{
       font-weight: bold;
-      background-color: white;
+      background-color: rgb(147, 196, 199);
+      width: fit-content;
       border:0;   
       font-weight: 100;
       font-size: 12px;
