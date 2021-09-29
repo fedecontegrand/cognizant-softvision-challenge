@@ -16,14 +16,17 @@ const STEPS: Candidate["step"][] = [
 
 function App() {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    setLoading(true);
     api.candidates.list().then((res: Candidate[]) => {
       const cand: Candidate[] = JSON.parse(localStorage.getItem("candidato") || "[]");
       const fin: Candidate[] = res.concat(cand);
 
       cand[0] && setCandidates(fin);
       !cand[0] && setCandidates(res);
+      setLoading(false);
     });
   }, []);
 
@@ -135,9 +138,9 @@ function App() {
                     </div>
                   </article>
                 ))
-            ) : (
+            ) : loading ? (
               <span>Cargando...</span>
-            )}
+            ) : null}
             {index === 0 && <button onClick={addCandidate}>Agregar Candidato</button>}
           </section>
         ))}
