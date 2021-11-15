@@ -1,6 +1,6 @@
 # Cognizant Softvision challenge
 
-<a href="https://cognizant-softvision-challenge-eight.vercel.app/">Visita mi resultado</a>
+<a href="https://cognizant-softvision-challenge-eight.vercel.app/"><h2>Visita mi resultado</h2></a>
 
 ![Cognizant Softvision](./src/assets/logo.png "Cognizant Softvision")
 
